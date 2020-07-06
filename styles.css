@@ -8,12 +8,12 @@ margin: 0;
 }
 
 .shift-left, .shift-right {
-  width:15%;
+  width:20%;
   height: inherit;
 }
 
 .command {
-  width: 10%;
+  width: 12%;
   height: inherit;
 }
 
@@ -62,7 +62,7 @@ margin: 0;
 }
 
 .space {
-width: 35%;
+width: 45%;
 }
 
 
@@ -87,10 +87,34 @@ max-height: 100%;
   justify-content: space-evenly;
 }
 
+.space-arrow-wrapper {
+  display: flex;
+
+}
+
 .spacebar-container {
-  max-width: 80%;
+  width: 80%;
   display: flex;
   justify-content: space-evenly;
+}
+
+.arrow-wrapper {
+  width: 20%;
+}
+
+.arrow-container {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  width: 25%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  margin: 0 5px;
 }
 
 .keyboard-key {
