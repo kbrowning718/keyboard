@@ -1,6 +1,12 @@
-body {}
+body {
+margin: 0;
+width: 100%;
+
+}
 
 .keyboard-container {
-  width: 90%;
+  position: fixed;
+  top: 25%;
+  margin: 10px;
   border: 1px solid;
 }
