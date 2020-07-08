@@ -180,3 +180,33 @@ box-shadow: 3px 3px 3px -1px rgba(000,0000,0000,0.4);
   background-color: #f9f9f9;
   border: 1px solid #f9f9f9;
 }
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 1024px) {
+.keyboard-key.fkey, .keyboard-key.power {
+  margin: 0px;
+}
+
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width:768px) {
+  .keyboard-key.fkey {
+    padding: 3px;
+  }
+
+  .keyboard-container {
+    width: 90%;
+  }
+
+  .screen-container {
+    width: 90%;
+  }
+
+  .number-label, .letter-label .number-icon {
+    font-size: .5em;
+}
