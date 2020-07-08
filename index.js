@@ -25,6 +25,8 @@ if(e.target.classList.contains("space")) {
 screenArray.push(" ");
 console.log(screenArray);
 
+screen.innerText = screenArray.join('');
+
 }
 
 if(e.target.classList.contains('enter')) {
