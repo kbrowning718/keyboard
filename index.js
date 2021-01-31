@@ -1,10 +1,13 @@
 const screen = document.getElementById('screen');
 const keys = document.getElementsByClassName('keyboard-key');
 
-
-
 let screenArray = [];
-screen.innerHTML = screenArray;
+
+screenArray.map((item) => {
+  const paragraph = document.createElement('p');
+  paragraph.innerText = item[0].join('');
+  screen.appendChild(paragraph);
+})
 
 
 
