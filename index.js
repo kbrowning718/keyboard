@@ -36,8 +36,6 @@ if(e.target.classList.contains('enter')) {
 
 if(e.target.classList.contains("delete")) {
 
-  typedCharacters.pop()
-
   var lastCharacter =  screenArray.pop();
 
 
