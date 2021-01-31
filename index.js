@@ -1,5 +1,6 @@
 var screen = document.getElementById('screen');
 var keys = document.getElementsByClassName('keyboard-key');
+var numbers = document.getElementsByClassName('number-label');
 
 let screenArray = [];
 screen.innerHTML = screenArray;
@@ -13,10 +14,13 @@ for(var i=0; i< keys.length; i++) {
 
 var typedCharacters = document.createElement('span');
 typedCharacters.innerHTML = characters;
+
+var typedNumbers = numbers.innerHTML
  {
 
    screenArray.push(typedCharacters.innerText);
 screen.appendChild(typedCharacters);
+screen.appendChild(typedNumbers);
 
 }
 }
