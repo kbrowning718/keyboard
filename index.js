@@ -1,52 +1,50 @@
 var screen = document.getElementById('screen');
 var keys = document.getElementsByClassName('keyboard-key');
-var numbers = document.getElementsByClassName('number-label');
+
+
+
+// starting array as empty; screen.innerHTML is the "screen"
 
 let screenArray = [];
 screen.innerHTML = screenArray;
 
-for(var i=0; i< keys.length; i++) {
+//click event for the letter keys; check to see if the class contains "letter"
 
-  keys[i].addEventListener("click", function (e) {
-    if(e.target.classList.contains("letter") || e.target.classList.contains("number")) {
+for(var i=0; i<keys.length; i++) {
+  keys[i].addEventListener("click", function(e) {
+    if(e.target.classList.contains('letter')) {
 
-    var characters = e.target.innerHTML;
+      // variable letters is the innerHTML of whatever was clicked
 
-var typedCharacters = document.createElement('span');
-typedCharacters.innerHTML = characters;
+      let letters = e.target.innerHTML;
+      console.log(letters);
 
-var typedNumbers = numbers.innerHTML
- {
+      //typedLetters is the new span element created in the screen.innerHTML
 
-   screenArray.push(typedCharacters.innerText);
-screen.appendChild(typedCharacters);
-screen.appendChild(typedNumbers);
+      var typedLetters = document.createElement('span');
+      typedLetters.innerHTML = letters;
 
+      screenArray.push(letters);
+      screen.appendChild(typedLetters);
+  }
+
+
+if(e.target.classList.contains('number')) {
+  let numberLabel = e.target.children[1].innerHTML;
+  console.log(numberLabel);
+
+  var typedNumbers = document.createElement('span');
+  typedNumbers.innerHTML = numberLabel;
+
+  screenArray.push(numberLabel);
+  screen.appendChild(typedNumbers);
 }
-}
-
-if(e.target.classList.contains("space")) {
-screenArray.push(" ");
-console.log(screenArray);
-
-screen.innerText = screenArray.join('');
-
-}
-
-if(e.target.classList.contains('enter')) {
-  var enter = document.createElement("br");
-  screen.appendChild(enter);
-}
-
-if(e.target.classList.contains("delete")) {
-
-  var lastCharacter =  screenArray.pop();
 
 
-}
+
+
 
 });
-
 
 
 }
