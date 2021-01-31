@@ -5,7 +5,7 @@ let screenArray = [];
 
 screenArray.map((item) => {
   const paragraph = document.createElement('p');
-  paragraph.innerText = item[0].join('');
+  paragraph.innerText = item.join('');
   screen.appendChild(paragraph);
 })
 
