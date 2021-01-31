@@ -4,9 +4,9 @@ const keys = document.getElementsByClassName('keyboard-key');
 let screenArray = [[]];
 
 const renderParagraphs = () => {
-  return screenArray.map((item) => {
+  return screenArray.map((s) => {
   const paragraph = document.createElement('p');
-  paragraph.innerText = p.join('');
+  paragraph.innerText = s.join('');
   return screen.appendChild(paragraph);
 
 })
@@ -20,12 +20,6 @@ for(let i=0; i<keys.length; i++) {
 
       var letters = e.target.innerHTML;
       console.log(letters);
-
-
-      var typedLetters = document.createElement('span');
-      typedLetters.innerHTML = letters;
-      screenArray.push(letters);
-      screen.appendChild(typedLetters);
   }
 
 
