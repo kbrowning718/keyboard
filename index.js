@@ -1,7 +1,7 @@
 const screen = document.getElementById('screen');
 const keys = document.getElementsByClassName('keyboard-key');
 
-let screenArray = [];
+let screenArray = [[]];
 
 screenArray.map((item) => {
   const paragraph = document.createElement('p');
