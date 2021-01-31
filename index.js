@@ -1,5 +1,5 @@
-var screen = document.getElementById('screen');
-var keys = document.getElementsByClassName('keyboard-key');
+const screen = document.getElementById('screen');
+const keys = document.getElementsByClassName('keyboard-key');
 
 
 
@@ -8,11 +8,9 @@ screen.innerHTML = screenArray;
 
 
 
-for(var i=0; i<keys.length; i++) {
+for(let i=0; i<keys.length; i++) {
   keys[i].addEventListener("click", function(e) {
     if(e.target.classList.contains('letter')) {
-
-
 
       var letters = e.target.innerHTML;
       console.log(letters);
