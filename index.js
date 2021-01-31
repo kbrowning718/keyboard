@@ -3,11 +3,14 @@ const keys = document.getElementsByClassName('keyboard-key');
 
 let screenArray = [[]];
 
-screenArray.map((item) => {
+const renderParagraphs = () => {
+  return screenArray.map((item) => {
   const paragraph = document.createElement('p');
-  paragraph.innerText = item.join('');
-  screen.appendChild(paragraph);
+  paragraph.innerText = p.join('');
+  return screen.appendChild(paragraph);
+
 })
+}
 
 
 
