@@ -7,7 +7,7 @@ screen.innerHTML = screenArray;
 for(var i=0; i< keys.length; i++) {
 
   keys[i].addEventListener("click", function (e) {
-    if(e.target.classList.contains("letter")) {
+    if(e.target.classList.contains("letter") || e.target.classList.contains("number")) {
 
     var characters = e.target.innerHTML;
 
