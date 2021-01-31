@@ -39,9 +39,6 @@ if(e.target.classList.contains("delete")) {
   var lastCharacter =  screenArray.pop();
 
 
-screen.innerText = screenArray.join('');
-
-
 }
 
 });
