@@ -49,7 +49,9 @@ for (let i = 0; i < keys.length; i++) {
     }
 
     if (e.target.classList.contains("space")) {
-      screenArray.push("");
+      const currentParagraph = screenArray[screenArray.length-1];
+      currentParagraph.push(" ");
+      renderParagraphs()
     }
   });
 }
