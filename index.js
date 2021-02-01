@@ -45,14 +45,17 @@ if(e.target.classList.contains('enter')) {
 }
 
 if(e.target.classList.contains('delete')) {
-  if(screenArray[screenArray.length-1].length > 0) {
-  screenArray[screenArray.length-1].pop();
-}
-else if(screenArray[screenArray.length-1].length <= 0) {
-  screenArray.pop();
+  const currentParagraph = screenArray[screenArray.length-1];
+  if(currentParagraph.length <= 0) {
+    screenArray.pop();
+  } else {
+    currentParagraph.pop()
+  }
+  renderParagraphs();
 }
 
-}
+
+
 
 });
 
