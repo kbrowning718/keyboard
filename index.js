@@ -44,6 +44,7 @@ if(e.target.classList.contains('enter')) {
 
 }
 
+
 if(e.target.classList.contains('delete')) {
   const currentParagraph = screenArray[screenArray.length-1];
   if(currentParagraph.length <= 0) {
@@ -54,7 +55,9 @@ if(e.target.classList.contains('delete')) {
   renderParagraphs();
 }
 
-
+if(e.target.classList.contains('space')) {
+  screenArray.push(" ");
+}
 
 
 });
