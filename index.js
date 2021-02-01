@@ -1,10 +1,12 @@
 const screen = document.getElementById('screen');
 const keys = document.getElementsByClassName('keyboard-key');
 
-let screenArray = [[]];
+let screenArray = [];
 
 const renderParagraphs = () => {
+  screen.innerHTML = ""
   return screenArray.map((s) => {
+    console.log(s)
   const paragraph = document.createElement('p');
   paragraph.innerText = s.join('');
   return screen.appendChild(paragraph);
@@ -17,9 +19,12 @@ const renderParagraphs = () => {
 for(let i=0; i<keys.length; i++) {
   keys[i].addEventListener("click", function(e) {
     if(e.target.classList.contains('letter')) {
-
-      var letters = e.target.innerHTML;
-      console.log(letters);
+      if(!screenArray.length > 0) {
+        screenArray.push([]);
+      }
+const letter = e.target.innerText;
+screenArray[screenArray.length-1].push(letter);
+renderParagraphs()
   }
 
 
@@ -36,13 +41,7 @@ if(e.target.classList.contains('number')) {
 
 
 if(e.target.classList.contains('enter')) {
-    var enter = document.createElement('p');
-
-  var newLine = [];
-
-newLine.push(enter.innerHTML);
-
-screen.appendChild(enter);
+    screenArray.push([]);
 
 }
 
