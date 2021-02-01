@@ -6,7 +6,6 @@ let screenArray = [];
 const renderParagraphs = () => {
   screen.innerHTML = ""
   return screenArray.map((s) => {
-    console.log(s)
   const paragraph = document.createElement('p');
   paragraph.innerText = s.join('');
   return screen.appendChild(paragraph);
